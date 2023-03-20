@@ -1,7 +1,7 @@
 public class PHD extends LVM {
-    private final String UUID;
-    public PHD(String name){
+    private int size;
+    public PHD(String name,int size){
         this.name = name;
-        UUID = genUUID();
+        this.size = size;
     }
 }
