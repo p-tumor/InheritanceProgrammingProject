@@ -13,6 +13,7 @@ public class Interface {
     private ArrayList<PV> freePVs;
     public void run(){
         installedPHDs = new ArrayList<>();
+        freePHDs= new ArrayList<>();
         madePVs = new ArrayList<>();
         freePVs = new ArrayList<>();
         System.out.println("Welcome to the Logical Volume Manager.");
@@ -25,7 +26,7 @@ public class Interface {
                 case "install-drive" -> {
                     if(s.length == 3) {
                         installedPHDs.add(new PHD(s[1],Integer.parseInt(s[2].substring(0,s[2].length()-1))));
-                        //freePHDs.add(installedPHDs.get(installedPHDs.size()-1));//to add reference to same object to another list
+                        freePHDs.add(installedPHDs.get(installedPHDs.size()-1));//to add reference to same object to another list
                     }
                 }
                 case "list-drives" -> {
